@@ -3,15 +3,16 @@ package com.example.parstagram
 import android.content.Intent
 import android.graphics.BitmapFactory
 import android.net.Uri
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Environment
 import android.provider.MediaStore
 import android.util.Log
+import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.FileProvider
 import com.parse.*
 import java.io.File
@@ -52,8 +53,11 @@ class MainActivity : AppCompatActivity() {
             // Launch camera to let user take picture
             onLaunchCamera()
         }
+
+
          // queryPosts()
     }
+
 
     // Send a Post object to our Parse server
     fun submitPost (description: String, user: ParseUser, file: File ) {
